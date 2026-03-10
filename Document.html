@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Urban Crow — premium cleaning services in Kochi</title>
+  <!-- fonts & icons -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#F2921D",
+            "background-light": "#F8FAFC",
+            "background-dark": "#0F172A",
+            "accent-blue": "#DBEAFE",
+            "navy-blue": "#1E293B"
+          },
+          fontFamily: {
+            display: ["Playfair Display", "serif"],
+            body: ["Outfit", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+            "large": "1rem"
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+    }
+
+    .dark .glass-card {
+      background: rgba(30, 41, 59, 0.8);
+    }
+
+    .service-image-container img {
+      transition: transform 0.5s ease;
+    }
+
+    .service-image-container:hover img {
+      transform: scale(1.05);
+    }
+
+    /* smooth anchor offset for fixed nav */
+    html {
+      scroll-padding-top: 5rem;
+    }
+  </style>
+</head>
+
+<body
+  class="font-body bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- ===== STICKY NAV (clean & compact) ===== -->
+  <nav
+    class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border-b border-slate-100 dark:border-slate-800 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-between h-auto md:h-20 py-3 md:py-0">
+        <!-- logo + address inline (desktop) -->
+        <div class="flex items-center gap-3">
+          <img alt="Urban Crow Logo" class="h-14 w-auto" src="assets/logo.png">
+          <div class="hidden lg:flex flex-col border-l border-slate-200 dark:border-slate-700 pl-4 ml-2">
+            <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">📍 Location</span>
+            <span class="text-sm dark:text-slate-300">Kunisngal house, Master lane Rd, Vaduthala</span>
+          </div>
+        </div>
+
+        <!-- contact & cta (right side) -->
+        <div class="flex items-center gap-4 sm:gap-6">
+          <!-- phone & email (hidden on smallest) -->
+          <div class="hidden sm:flex items-center gap-3">
+            <div class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-primary text-xl">call</span>
+              <div class="flex flex-col">
+                <span class="text-xs text-slate-500">Call</span>
+                <span class="text-sm font-semibold">+91 7012609506</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-primary text-xl">mail</span>
+              <div class="flex flex-col">
+                <span class="text-xs text-slate-500">Email</span>
+                <span class="text-sm font-semibold truncate max-w-[150px]">urbancrow2025@gmail.com</span>
+              </div>
+            </div>
+          </div>
+          <a class="bg-primary hover:bg-orange-600 text-white px-5 py-2 rounded-full font-medium transition-all shadow-lg shadow-orange-200/50 dark:shadow-none text-sm sm:px-6 sm:py-2.5"
+            href="#contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="relative h-[600px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img alt="Professional cleaning service background" class="w-full h-full object-cover"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA__Q9rlttD1zSykv96nHATbWGj3VUHeRJA5TfbwQPiF9MjpAHJOAuNM9M8GwSXtBK_FQM0iO96Uyek0HCk4eRHCXpFpSP60cPsdJKzvRgVqb2OGjnSNPxzm7LRlG-71TFEBRVKMn7SZsWwQsTsSZR3u_XMXJvoeGtO3ysg7d0JRVAXrW8B0ai5EUkDHyKVfkyfth76bBlpUIcy_saEcCIwHohrx9tRLqbZ8gsx01510g152ieIuWJAG5_bFyetOOUSkjNMIG7lqvE"
+        loading="lazy">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+      <div class="max-w-2xl">
+        <h1 class="font-display text-5xl md:text-7xl mb-6 leading-tight">We Are The <span class="text-primary">Urban
+            Crow</span></h1>
+        <p class="text-xl mb-8 text-slate-300">We leave it perfect, we leave it spotless. Experience the highest
+          standards of cleanliness with our expert team.</p>
+        <div class="flex flex-wrap gap-4">
+          <a class="bg-primary hover:bg-orange-600 px-8 py-4 rounded-full font-bold flex items-center gap-2 transition-all transform hover:-translate-y-1 shadow-lg shadow-orange-500/30"
+            href="tel:+917012609506">
+            <span class="material-symbols-outlined">call</span> Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== FEATURES (fixed grid class) ===== -->
+  <section class="py-24 bg-accent-blue dark:bg-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm block mb-4">What We Offer</span>
+      <h2 class="font-display text-4xl md:text-5xl mb-16 dark:text-white">We ensure top-notch <span
+          class="text-primary italic">cleaning</span></h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- card 1 -->
+        <div class="group">
+          <div
+            class="mb-8 overflow-hidden rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-sm group-hover:shadow-xl transition-all">
+            <img alt="Experienced Professionals" class="w-48 h-48 mx-auto mb-6 object-contain"
+              src="assets/experienced_professionals.png" loading="lazy">
+            <h3 class="text-xl font-bold mb-4 dark:text-white">Experienced Professionals</h3>
+            <p class="text-slate-600 dark:text-slate-400">Our skilled cleaning team ensures spotless results with expert
+              techniques and attention to detail.</p>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="group">
+          <div
+            class="mb-8 overflow-hidden rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-sm group-hover:shadow-xl transition-all">
+            <img alt="Tailored Solutions" class="w-48 h-48 mx-auto mb-6 object-contain"
+              src="assets/tailored_solutions.png" loading="lazy">
+            <h3 class="text-xl font-bold mb-4 dark:text-white">Tailored Solutions</h3>
+            <p class="text-slate-600 dark:text-slate-400">Customized cleaning plans for your unique space — maximum
+              efficiency and satisfaction.</p>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="group">
+          <div
+            class="mb-8 overflow-hidden rounded-2xl bg-white dark:bg-slate-800 p-8 shadow-sm group-hover:shadow-xl transition-all">
+            <img alt="Advanced Techniques" class="w-48 h-48 mx-auto mb-6 object-contain"
+              src="assets/advanced_cleaning_techniques.png" loading="lazy">
+            <h3 class="text-xl font-bold mb-4 dark:text-white">Advanced Cleaning Techniques</h3>
+            <p class="text-slate-600 dark:text-slate-400">Eco‑friendly products and pro equipment for deep cleaning,
+              stain removal, and protection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT (fixed stats consistency) ===== -->
+  <section class="py-24 bg-white dark:bg-slate-900 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2 relative">
+          <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+          <img alt="Cleaner Smiling" class="rounded-large shadow-2xl relative z-10 w-full"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAavMYY6z8notttIVrp7K9lqt0m5UmO6yNsTAntThiT2SRNaMyaZQrmdpJfm7DQhZCSj0RWNZ-N6bA90je2mBUjIHSqm_Q7hNtHpLqcUUWAmwwgTjUIptQb-zwo8KmipYMjtBQIEnSHqbQdGFuc7ZX2_H8-u_PTWuJuL1-sKMeyydQ5rjT84ZL7TnLNJEJX6lH_inY7W2oRXS1r6Kcfjhcesh0C2Yvy5_C9N_rwvONcETM4NAh83ofz8djVLgsushT4SY40XFkWqnE"
+            loading="lazy">
+          <div
+            class="absolute -bottom-6 -right-6 bg-primary text-white p-8 rounded-large z-20 shadow-xl hidden md:block">
+            <p class="text-4xl font-bold">10+</p>
+            <p class="text-sm uppercase tracking-wider font-semibold">Years Exp.</p>
+          </div>
+        </div>
+        <div class="lg:w-1/2">
+          <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm block mb-4">About Us</span>
+          <h2 class="font-display text-4xl md:text-5xl mb-8 dark:text-white">The best professional cleaning services
+            <span class="text-primary italic">in Kochi</span>
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Clean and comfortable spaces are a primary
+            necessity for healthy and happy living. At Urban Crow, we take the hassles out of the cleaning process.</p>
+          <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">Be it your home, office, or hotel, with the
+            most advanced equipment and eco-friendly products, our in-house experts arrive at your doorstep anytime.</p>
+          <div class="grid grid-cols-3 gap-8 border-t border-slate-100 dark:border-slate-800 pt-8">
+            <div>
+              <p class="text-3xl font-bold text-primary">1000+</p>
+              <p class="text-sm text-slate-500 uppercase">Spaces Cleaned</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-primary">50K+</p>
+              <p class="text-sm text-slate-500 uppercase">Satisfied Clients</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-primary">10+</p>
+              <p class="text-sm text-slate-500 uppercase">Years of Exp</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICE GRID (car, roof, furniture) ===== -->
+  <section class="py-24 bg-accent-blue/40 dark:bg-slate-800/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm block mb-4">Our Services</span>
+        <h2 class="font-display text-4xl md:text-5xl mb-6 dark:text-white">Your space deserves the <span
+            class="text-primary">best cleaning</span> – we deliver</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 text-left">
+        <!-- Car washing -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg group">
+          <div class="h-64 overflow-hidden">
+            <img alt="Car Washing"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaWXCohuBZhV-NiCXmJkL0phjMgbIBkKlv0nCVVzGlbvwXCt1-I_PIOOLj3R8yXXebvaEw5os3WykF5x-cmrCPGg40W_J9M1OzV-4hC1LkrDEF4puPpnzjUaJjn2FSxdzNbDdJCIeqVgEzZZPCypn4nWlzlOrbuNKW_coiy23NoYYrvoQnfitcYmpdffqpk-57w0IYTWW_NWT6loaSbvU6n3EN5kfx3RxC3uHzSy0kDKhCcTPFBiI6_ARfkgOiG8bocBqQTSz5pO8"
+              loading="lazy">
+          </div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold mb-4 dark:text-white">Door step car washing</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Keep your car looking fresh and shiny with expert
+              car washing. We remove dirt and grime while protecting your vehicle's paint.</p>
+            <a class="text-primary font-bold inline-flex items-center gap-2 group/btn" href="#">Learn More <span
+                class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span></a>
+          </div>
+        </div>
+        <!-- Roof & Terrace -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg group">
+          <div class="h-64 overflow-hidden">
+            <img alt="Roof Cleaning"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              src="assets/roof_terrace_cleaning.png" loading="lazy">
+          </div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold mb-4 dark:text-white">Roof & Terrace Cleaning</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Specialized cleaning to remove dirt, moss, and
+              debris from flat surfaces — protect your roof from leaks.</p>
+            <a class="text-primary font-bold inline-flex items-center gap-2 group/btn" href="#">Learn More <span
+                class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span></a>
+          </div>
+        </div>
+        <!-- Furniture -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg group">
+          <div class="h-64 overflow-hidden">
+            <img alt="Furniture Cleaning"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              src="assets/furniture_cleaning.png" loading="lazy">
+          </div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold mb-4 dark:text-white">Furniture Cleaning</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Restore your furniture's original look, remove
+              dust, stains, and allergens. Safe for fabric and environment.</p>
+            <a class="text-primary font-bold inline-flex items-center gap-2 group/btn" href="#">Learn More <span
+                class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROOF DETAIL ===== -->
+  <section class="py-24 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+          <h2 class="font-display text-4xl mb-6 dark:text-white">Roofs & Terrace Cleaning</h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-8">Your roofs and terraces are the most exposed, leading to
+            stains, moss build-up, and structural damage. Our expert services restore and protect.</p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Protects your roof from leaks</li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Extends the life of your terrace</li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Removes stains and moss buildup</li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Eco-friendly cleaning products</li>
+          </ul>
+        </div>
+        <div class="lg:w-1/2">
+          <img alt="Roof Cleaning Service" class="rounded-large shadow-xl w-full object-cover"
+            src="assets/roof_terrace_cleaning.png" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FURNITURE DETAIL ===== -->
+  <section class="py-24 bg-accent-blue/20 dark:bg-slate-800/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div class="lg:w-1/2">
+          <h2 class="font-display text-4xl mb-6 dark:text-white">Furniture Cleaning</h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-8">Deep sanitisation for homes, offices, and hotels. We
+            restore freshness and extend furniture life with safe, eco-friendly methods.</p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Removes dust, stains, allergens</li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Extends the life of your furniture
+            </li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Restores original look and feel</li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Safe for fabric and environment</li>
+          </ul>
+        </div>
+        <div class="lg:w-1/2">
+          <img alt="Furniture Cleaning" class="rounded-large shadow-xl w-full object-cover"
+            src="assets/furniture_cleaning.png" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLOOR CLEANING ===== -->
+  <section class="py-24 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+          <h2 class="font-display text-4xl mb-6 dark:text-white">Floor Cleaning</h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-8">Marble, tile, or wood — we restore the original shine. Deep
+            cleaning, stain removal, and protective polish.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              class="flex items-center gap-3 bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+              <span class="material-symbols-outlined text-primary">verified</span><span
+                class="text-sm font-semibold">Stain Removal</span>
+            </div>
+            <div
+              class="flex items-center gap-3 bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+              <span class="material-symbols-outlined text-primary">verified</span><span
+                class="text-sm font-semibold">Deep Polish</span>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/2">
+          <img alt="Floor Cleaning" class="rounded-large shadow-2xl"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG0Tt-UO16Jn92lHPNR0hDmIxE6Te1cbmBEKP3iDLcEMXmFE_80cpSxCnwOL5agL_-DLVGKzjciAXx_sho4FYnMLzY2C1pG1RG0qoV9VFZ5Ye-ELKpphdu7GOHbhiyUU7EIvZ6FvZ9S5tk-qe-Z6g6m-oazuiQkWRKiY77kafPUlnGEXkX3U69d74hP7-ogzsj1AnapQMLvGkQAi7Mwvcb9FPjUpztUsxDGsT33DYTYCm1l6wQs7yQ_GVWMfT46HJOniIXC9PvaBo"
+            loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOME, OFFICE & HOTEL CLEANING ===== -->
+  <section class="py-24 bg-accent-blue/20 dark:bg-slate-800/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div class="lg:w-1/2">
+          <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm block mb-4">Our Services</span>
+          <h2 class="font-display text-4xl mb-6 dark:text-white">Home, Office &amp; Hotel Cleaning</h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-8">Welcome yourself and your guest, with a clean and
+            well-maintained space. From dusting to vacuuming we provide you with deep sanitisation. From cozy home and a
+            bustling office to a luxurious hotel, we give that fresh, clean, and inviting space every time. Get a
+            Special touch for Your Space with us! <strong>Contact Now!</strong></p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Creates a healthy, fresh environment
+            </li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Removes dirt, dust, and allergens
+            </li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Customized solutions to your specific
+              needs</li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Eco-friendly and safe cleaning</li>
+          </ul>
+          <a class="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-full font-bold inline-flex items-center gap-2 transition-all shadow-lg shadow-orange-200/50"
+            href="#contact">Contact Now <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="lg:w-1/2 service-image-container">
+          <img alt="Home Office and Hotel Cleaning Service" class="rounded-large shadow-xl w-full object-cover"
+            src="assets/home_office_hotel_cleaning.png" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOFA SHAMPOOING ===== -->
+  <section class="py-24 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+          <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm block mb-4">Our Services</span>
+          <h2 class="font-display text-4xl mb-6 dark:text-white">Sofa Shampooing</h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-8">The sofa is a safe space where you relax and unwind, after
+            a long day. But as time goes on, stains, dirt, and odors will degrade your comfort. But not anymore. We
+            provide you with specialised cleaning solutions without damaging the material or the fabric. We leave your
+            sofa looking and smelling as good as new! Are you in? <strong>Contact Today!</strong></p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Removes deep-set dirt and stains</li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Restores softness and freshness</li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Extends the life of your sofa</li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Safe for fabric and the environment
+            </li>
+          </ul>
+          <a class="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-full font-bold inline-flex items-center gap-2 transition-all shadow-lg shadow-orange-200/50"
+            href="#contact">Contact Today <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="lg:w-1/2 service-image-container">
+          <img alt="Sofa Shampooing Service" class="rounded-large shadow-xl w-full object-cover"
+            src="assets/sofa_shampooing.png" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOORSTEP CAR WASHING ===== -->
+  <section class="py-24 bg-accent-blue/20 dark:bg-slate-800/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div class="lg:w-1/2">
+          <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm block mb-4">Our Services</span>
+          <h2 class="font-display text-4xl mb-6 dark:text-white">Doorstep Car Washing</h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-8">Your car needs professional care to stay clean and maintain
+            its shine, inside and out. Over time, dirt, dust, and grime can dull its appearance and reduce its value. No
+            need to worry! Our expert mobile car washing service comes to you, using safe and eco-friendly methods to
+            give your car the care it deserves.</p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Removes dust, dirt &amp; tough stains
+            </li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Professional doorstep cleaning</li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Deep interior clean for a fresh ride
+            </li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Eco-friendly &amp; vehicle-safe
+              process</li>
+          </ul>
+          <a class="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-full font-bold inline-flex items-center gap-2 transition-all shadow-lg shadow-orange-200/50"
+            href="#contact">Book Now <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="lg:w-1/2 service-image-container">
+          <img alt="Doorstep Car Washing Service" class="rounded-large shadow-xl w-full object-cover"
+            src="assets/doorstep_car_washing.png" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOORSTEP CAR WASHING (INTERIOR DETAIL) ===== -->
+  <section class="py-24 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+          <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm block mb-4">Our Services</span>
+          <h2 class="font-display text-4xl mb-6 dark:text-white">Doorstep Car Washing <span class="text-primary">&amp;
+              Detailing</span></h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-8">Your car needs professional care to stay clean and maintain
+            its shine, inside and out. Over time, dirt, dust, and grime can dull its appearance and reduce its value. No
+            need to worry! Our expert mobile car washing service comes to you, using safe and eco-friendly methods to
+            give your car the care it deserves.</p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Removes dust, dirt &amp; tough stains
+            </li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Professional doorstep cleaning</li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Deep interior clean for a fresh ride
+            </li>
+            <li class="flex items-center gap-2 text-sm"><span
+                class="material-symbols-outlined text-primary">check_circle</span> Eco-friendly &amp; vehicle-safe
+              process</li>
+          </ul>
+          <a class="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-full font-bold inline-flex items-center gap-2 transition-all shadow-lg shadow-orange-200/50"
+            href="#contact">Book Now <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="lg:w-1/2 service-image-container">
+          <img alt="Doorstep Car Washing and Detailing" class="rounded-large shadow-xl w-full object-cover"
+            src="assets/doorstep_car_washing.png" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="py-24 bg-accent-blue dark:bg-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm block mb-4">Testimonial</span>
+        <h2 class="font-display text-4xl md:text-5xl dark:text-white">What Our Clients <span
+            class="text-primary">Say</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- testimonial 1 -->
+        <div
+          class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800">
+          <div class="flex text-primary mb-4"><span class="material-symbols-outlined">star</span><span
+              class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span
+              class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
+          <p class="text-slate-600 dark:text-slate-400 italic mb-6">"Urban Crow transformed our home! The team was
+            professional, and our space has never felt cleaner."</p>
+          <div class="flex items-center gap-4">
+            <div class="h-12 w-12 rounded-full bg-slate-200 overflow-hidden"><img alt="Anita Raj"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKUJXyACaAtPQ90TH5xMZxR0w_u14HF9nIAcVAUddWyVnHPeTK5jdvgmYhwK2aQkXQvU-t2-EEELhPKQUc-_KBWVS6PvNAQDeQIkcdLEL17NvzYJdw23Y2BbqyDLXy08G1S-ShYfdzXCWqBjibFFP3gr9UsDB46ZbPFhJxHo7umrozBNntIzFQY4FBdp0_H1Q6OBl_2-YlmxgjitBTrU0ROTOALlEWput_ZMu3HXywyCeIsnB98AS6s6dWU0AH4q6wXwdBHECzH2U"
+                class="w-full h-full object-cover"></div>
+            <div>
+              <h4 class="font-bold dark:text-white">Anita Raj</h4>
+              <p class="text-xs text-slate-500 uppercase">Happy Customer</p>
+            </div>
+          </div>
+        </div>
+        <!-- testimonial 2 -->
+        <div
+          class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800">
+          <div class="flex text-primary mb-4"><span class="material-symbols-outlined">star</span><span
+              class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span
+              class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
+          <p class="text-slate-600 dark:text-slate-400 italic mb-6">"Reliable and efficient service. They took care of
+            every corner, and my office now looks spotless."</p>
+          <div class="flex items-center gap-4">
+            <div class="h-12 w-12 rounded-full bg-slate-200 overflow-hidden"><img alt="Ramesh Nair"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOPw0RtMqx8JtfZnn3MPey7ylfzIxCDjhTaeyma_Z9hV70aS-bvOeHQ7fSh0Zfad4qwaWKd_YsaP9vpGrFfeJADuL10cqw9syt8YcDSbAQMH65BpsuRcBwGMFK8RLcqQo1V6FgUum2UYYj386rutdTsM56v5kpKSCq7pep-tdz8yYyyuZLv_xK84Ts7964uP5UyPRTH2JGeR5QoXpB9BwqIBIHHFM5-Fk7IbJwTES1qUNxL_e6beZe8IGwAGgVC-W49c8mD8b9I10"
+                class="w-full h-full object-cover"></div>
+            <div>
+              <h4 class="font-bold dark:text-white">Ramesh Nair</h4>
+              <p class="text-xs text-slate-500 uppercase">Business Owner</p>
+            </div>
+          </div>
+        </div>
+        <!-- testimonial 3 -->
+        <div
+          class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all border border-slate-100 dark:border-slate-800">
+          <div class="flex text-primary mb-4"><span class="material-symbols-outlined">star</span><span
+              class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span
+              class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
+          <p class="text-slate-600 dark:text-slate-400 italic mb-6">"Urban Crow made my hotel shine! Guests have been
+            complimenting the cleanliness ever since."</p>
+          <div class="flex items-center gap-4">
+            <div class="h-12 w-12 rounded-full bg-slate-200 overflow-hidden"><img alt="Vikram Shetty"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQi11SPxPncZanxwDFA4Zybhkd3i5-jjB2uBMsYwxeIdbshWNMz1X0JDbcht1UybHSq_7WyEf1k5eJ1-aOKkzKzJKV_OpXh1_Dyay9YTZJczXCGfmCMeENi8ugPNmg1s4938V9F1LZW8hDVUqDWi3beScN_E7r17C0DvHOwAZBND9lDlXi9kuzHSKUxjZk23ToPKE3wNcb5OtGYEBdTUZACNEhCti2dVHSlbSLi2PUEYVXptIDZkcsRNoNKDUzLm32_Pj4I1KGqVI"
+                class="w-full h-full object-cover"></div>
+            <div>
+              <h4 class="font-bold dark:text-white">Vikram Shetty</h4>
+              <p class="text-xs text-slate-500 uppercase">Hotel Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="py-24 bg-white dark:bg-slate-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm block mb-4">FAQ</span>
+        <h2 class="font-display text-4xl md:text-5xl dark:text-white">Frequently Asked <span
+            class="text-primary">Questions</span></h2>
+      </div>
+      <div class="space-y-4">
+        <details
+          class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700"
+          open>
+          <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-lg dark:text-white">
+            Which types of cleaning services are offered?<span
+              class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <p class="mt-4 text-slate-600 dark:text-slate-400">Residential, office, car washing, floor polishing,
+            furniture, and specialized roof cleaning.</p>
+        </details>
+        <details
+          class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700">
+          <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-lg dark:text-white">
+            How do I book a service?<span
+              class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <p class="mt-4 text-slate-600 dark:text-slate-400">Call +91 7012609506, email us, or fill the contact form.
+            We'll confirm within hours.</p>
+        </details>
+        <details
+          class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700">
+          <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-lg dark:text-white">
+            Are cleaning products safe for pets and children?<span
+              class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <p class="mt-4 text-slate-600 dark:text-slate-400">Yes, we use eco-friendly, non-toxic agents safe for
+            everyone.</p>
+        </details>
+        <details
+          class="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700">
+          <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-lg dark:text-white">
+            Do you offer customised packages?<span
+              class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <p class="mt-4 text-slate-600 dark:text-slate-400">Absolutely. Contact us for a personalized quote tailored to
+            your needs.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT + MAP (form with simple alert) ===== -->
+  <section class="py-24 bg-accent-blue/30 dark:bg-slate-800/30" id="contact">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white dark:bg-slate-900 rounded-large shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+        <div class="lg:w-1/2 p-8 lg:p-12">
+          <h2 class="font-display text-4xl mb-8 dark:text-white">Find us with <span
+              class="text-primary italic">ease</span></h2>
+          <div class="space-y-6 mb-12">
+            <div class="flex gap-4"><span class="material-symbols-outlined text-primary">location_on</span>
+              <div>
+                <h4 class="font-bold dark:text-white">Address</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-sm">Kunisngal house, master lane(Rd)vaduthala,
+                  Cochin-682023</p>
+              </div>
+            </div>
+            <div class="flex gap-4"><span class="material-symbols-outlined text-primary">call</span>
+              <div>
+                <h4 class="font-bold dark:text-white">Phone</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-sm">+91 7012609506<br>+91 9533398368</p>
+              </div>
+            </div>
+            <div class="flex gap-4"><span class="material-symbols-outlined text-primary">mail</span>
+              <div>
+                <h4 class="font-bold dark:text-white">Email</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-sm">urbancrow2025@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="h-64 rounded-xl overflow-hidden grayscale contrast-125 dark:invert">
+            <iframe allowfullscreen="" height="100%" loading="lazy"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62865.98242586737!2d76.24155163614902!3d9.996165039396264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514ab2d2c5%3A0xc6145ad85844d2e7!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1709564234567!5m2!1sen!2sin"
+              style="border:0;" width="100%"></iframe>
+          </div>
+        </div>
+        <div class="lg:w-1/2 bg-slate-50 dark:bg-slate-800 p-8 lg:p-12 border-l border-slate-100 dark:border-slate-700">
+          <h2 class="font-display text-4xl mb-8 dark:text-white">Drop Us a <span class="text-primary italic">Line</span>
+          </h2>
+          <form id="contactForm" class="space-y-6"
+            onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will get back to you soon.');">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div><label class="block text-sm font-semibold mb-2 dark:text-slate-300">Name *</label><input
+                  class="w-full bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 focus:ring-primary focus:border-primary"
+                  placeholder="John Doe" type="text" required></div>
+              <div><label class="block text-sm font-semibold mb-2 dark:text-slate-300">Email *</label><input
+                  class="w-full bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 focus:ring-primary focus:border-primary"
+                  placeholder="john@example.com" type="email" required></div>
+            </div>
+            <div><label class="block text-sm font-semibold mb-2 dark:text-slate-300">Phone *</label><input
+                class="w-full bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 focus:ring-primary focus:border-primary"
+                placeholder="+91 0000000000" type="tel" required></div>
+            <div><label class="block text-sm font-semibold mb-2 dark:text-slate-300">Message *</label><textarea
+                class="w-full bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 focus:ring-primary focus:border-primary"
+                placeholder="How can we help you?" rows="4" required></textarea></div>
+            <button
+              class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 rounded-lg transition-all shadow-lg hover:shadow-orange-200"
+              type="submit">Submit Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-navy-blue text-white pt-24 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div>
+          <img alt="Urban Crow Logo" class="h-16 w-auto mb-8" src="assets/logo.png">
+          <p class="text-slate-400 text-sm mb-6 leading-relaxed">Dedicated to premium cleaning solutions in Kochi and
+            surrounding areas. Spotless quality, guaranteed.</p>
+
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-8">Get in Touch</h4>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-sm">location_on</span>
+              Kunisngal house, master lane(Rd)vaduthala, Cochin-682023</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-sm">mail</span>
+              urbancrow2025@gmail.com</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-sm">call</span> +91
+              7012609506</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-8">Our Services</h4>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li><a class="hover:text-primary transition-colors" href="#">Roof & Terrace Cleaning</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Furniture Cleaning</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Floor Carpet Cleaning</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Home & Office Cleaning</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Sofa Shampooing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-8">Stay Updated</h4>
+          <p class="text-slate-400 text-sm mb-6">Book your cleaning today and experience the difference!</p><a
+            class="bg-primary hover:bg-orange-600 px-6 py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-all"
+            href="tel:+917012609506"><span class="material-symbols-outlined">call</span> Call Now</a>
+        </div>
+      </div>
+      <div
+        class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
+        <p>© 2024 Urban Crow. All rights reserved.</p>
+        <div class="flex gap-8 mt-4 md:mt-0"><a class="hover:text-primary" href="#">Privacy Policy</a><a
+            class="hover:text-primary" href="#">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- fixed action buttons -->
+  <div class="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+    <a class="bg-primary text-white h-14 w-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform shadow-orange-400/50"
+      href="tel:+917012609506" aria-label="Call Us">
+      <span class="material-symbols-outlined text-2xl">call</span>
+    </a>
+    <button
+      class="bg-primary text-white h-12 w-12 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top"><span
+        class="material-symbols-outlined">arrow_upward</span></button>
+  </div>
+
+  <!-- dark mode toggle -->
+  <div class="fixed top-24 right-4 z-50">
+    <button class="bg-white dark:bg-slate-800 p-2 rounded-full shadow-lg border border-slate-200 dark:border-slate-700"
+      onclick="document.documentElement.classList.toggle('dark')" aria-label="Toggle dark mode">
+      <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+      <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+    </button>
+  </div>
+
+</body>
+
+</html>
